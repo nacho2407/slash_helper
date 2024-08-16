@@ -9,7 +9,7 @@ int main(int argc, char* argv[]) {
     std::cin.tie(nullptr);
 
     if(argc != 2) {
-        std::cerr << "Usage: ./slash_helper.exe <argv[1]>" << std::endl;
+        std::cerr << "Usage: ./slash_helper.exe <filename>" << std::endl;
 
         return 1;
     }
