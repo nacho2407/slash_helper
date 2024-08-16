@@ -2,6 +2,8 @@
 #include <fstream>
 #include <string>
 
+#define TAB_SIZE 8
+
 int main(int argc, char* argv[]) {
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
@@ -31,14 +33,14 @@ int main(int argc, char* argv[]) {
         int length = line.length();
         for(int i = 0; i < line.length(); i++) {
             if(line[i] == '\t')
-                length += 3;
+                length += TAB_SIZE - 1;
         }
 
         int count = 0;
         if (line.empty())
-            count = 20;
+            count = 80 / TAB_SIZE;
         else if(length < 80)
-            count = 20 - length / 4;
+            count = 80 / TAB_SIZE * 10 - length / TAB_SIZE;
 
         for (int i = 0; i < count; i++)
             line += '\t';
