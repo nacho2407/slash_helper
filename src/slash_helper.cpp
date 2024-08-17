@@ -40,7 +40,7 @@ int main(int argc, char* argv[]) {
         if (line.empty())
             count = 80 / TAB_SIZE;
         else if(length < 80)
-            count = 80 / TAB_SIZE * 10 - length / TAB_SIZE;
+            count = 80 / TAB_SIZE - length / TAB_SIZE;
 
         for (int i = 0; i < count; i++)
             line += '\t';
