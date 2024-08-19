@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 
+#define OUTPUT_FILE "slashed.out"
 #define TAB_SIZE 8
 
 int main(int argc, char* argv[]) {
@@ -21,9 +22,9 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    std::ofstream output_file("slashed.out");
+    std::ofstream output_file(OUTPUT_FILE);
     if (!output_file.is_open()) {
-        std::cerr << "Error: Could not create output file." << std::endl;
+        std::cerr << "Error: Could not create output file" << std::endl;
 
         return 1;
     }
@@ -51,7 +52,7 @@ int main(int argc, char* argv[]) {
     input_file.close();
     output_file.close();
 
-    std::cout << "Processing complete." << std::endl;
+    std::cout << "Processing complete" << std::endl;
 
     return 0;
 }
